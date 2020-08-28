@@ -4,6 +4,6 @@ class Ingredient < ApplicationRecord
     # uniqueness of the name
     validates :name, uniqueness: true
 
-    has_many :doses, dependent: :destroy
+    has_many :doses
     has_many :cocktails, through: :doses
 end
